@@ -1,0 +1,15 @@
+{
+  "name": "Alkaysan Kasir App",
+  "short_name": "Alkaysan Kasir",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/images/icon-alkaysan.png",
+      "sizes": "118x118",
+      "type": "image/png"
+    }
+  ]
+}

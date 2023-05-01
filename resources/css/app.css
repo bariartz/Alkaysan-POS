@@ -1,0 +1,59 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --skeleton-loading: #ededed;
+}
+
+@layer components {
+  button:disabled {
+    opacity: .7;
+  }
+
+  .loading {
+    background-color: var(--skeleton-loading);
+    background: linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, .5) 50%,
+      rgba(255, 255, 255, 0) 60%
+    ) var(--skeleton-loading);
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: 1s skeletonLoading ease-in-out infinite;
+  }
+
+  @keyframes skeletonLoading {
+    to {
+      background-position-x: -20%
+    }
+  }
+
+  .sidebar__menu__list {
+    @apply flex items-center justify-between w-full h-12 px-3 rounded hover:bg-gray-500 cursor-pointer;
+  }
+
+  .sidebar__menu__list > svg {
+    margin-right: .7em;
+  }
+
+  .sidebar__menu__name {
+    @apply mr-auto text-black dark:text-white;
+  }
+
+  .list__group {
+    @apply mt-3 w-[400px!important];
+  }
+
+  .list__group__item {
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid rgba(0,0,0,.125);
+    @apply mt-2.5 rounded-none bg-white py-3 px-5 cursor-pointer text-center;
+  }
+
+  .list__group__item:hover {
+    @apply scale-x-110;
+  }
+}
